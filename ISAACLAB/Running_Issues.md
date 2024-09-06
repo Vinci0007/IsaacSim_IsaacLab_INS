@@ -30,3 +30,27 @@ data = json.load(open(d+“/”+file , encoding = ‘UTF8’))
 # Issues 2
 #######
 
+## ** Description: ** 
+- use the local ".usd" file , but fault:
+-
+- 2024-09-06 11:26:47 [29,863ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-09-06 11:26:47 [29,863ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-09-06 11:26:47 [29,863ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-09-06 11:26:47 [29,864ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-09-06 11:26:47 [29,864ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-09-06 11:26:47 [29,864ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-09-06 11:26:47 [29,865ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-09-06 11:26:47 [29,865ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-09-06 11:26:47 [29,865ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-09-06 11:26:47 [29,866ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-09-06 11:26:47 [29,866ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2024-09-06 11:26:47 [29,866ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Core' for removal
+2024-09-06 11:26:47 [30,022ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+
+## ** Solv:::**
+
+This is because the World is not rendered.
+add this to code:
+** world.step(render=True)
+
+
