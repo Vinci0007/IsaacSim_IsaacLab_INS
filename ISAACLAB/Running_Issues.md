@@ -1,7 +1,9 @@
-######
-Issues 1
+
+# Issues 1
 #######
-Des:
+
+** Des: ** 
+
 C:\Users\mm\AppData\Local\ov\pkg\isaac_sim-2023.1.1\kit\python\lib\json_init_.py(293): load
 c:/users/mm/appdata/local/ov/pkg/isaac_sim-2023.1.1/exts/omni.isaac.sensor/omni/isaac/sensor/scripts/menu.py(204): init
 c:/users/mm/appdata/local/ov/pkg/isaac_sim-2023.1.1/exts/omni.isaac.sensor/omni/isaac/sensor/scripts/extension.py(31): on_startup
@@ -16,11 +18,15 @@ C:\Users\mm\AppData\Local\ov\pkg\isaac_sim-2023.1.1\standalone_examples\api\omni
 2024-06-03 08:56:37 [22,594ms] [Error] [omni.ext.plugin] [ext: omni.isaac.sensor-9.11.1] Failed to startup python extension.
 
 
-Solv:::
-ov/pkg/isaac_sim-2023.1.1/exts/omni.isaac.sensor/omni/isaac/sensor/scripts/menu.py
+** Solv:::**
 
+ov/pkg/isaac_sim-2023.1.1/exts/omni.isaac.sensor/omni/isaac/sensor/scripts/menu.py
 And modified the line 210 :
 from
 data = json.load(open(d+“/”+file )
 to
 data = json.load(open(d+“/”+file , encoding = ‘UTF8’))
+
+# Issues 2
+#######
+
