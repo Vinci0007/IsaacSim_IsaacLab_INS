@@ -51,6 +51,7 @@ data = json.load(open(d+“/”+file , encoding = ‘UTF8’))
 
 This is because the World is not rendered.
 add this to code:
+
 ** world.step(render=True)
 
 
